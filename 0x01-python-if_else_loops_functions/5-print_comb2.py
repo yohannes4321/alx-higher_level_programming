@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 for i in range(0, 100):
-    if i <= 9:
-        print(f"0{i}, ", end='')
+    if:
+        print("{:02}".format(i), end=', ')
+     
     elif i == 99:
-        print(f"{i}", end='')
+        print("{i}".format(i) )
 
-    else:
-        print(f"{i}, ", end='')
+
