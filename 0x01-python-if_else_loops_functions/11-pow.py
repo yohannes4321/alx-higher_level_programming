@@ -4,5 +4,6 @@ def pow(a,b):
         return 1
     else :
         return (a * Pow(a, (b-1))
+print(pow(a,b))
 ~
 ~
