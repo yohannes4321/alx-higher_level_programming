@@ -1,29 +1,32 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
-# Importing Functions from calculator_1 Module
-    from calculator_1 import add
-    from calculator_1 import sub
-    from calculator_1 import mul
-    from calculator_1 import div
+
+# Importing Specific Functions from calculator_1 Module
+from calculator_1 import add, sub, mul, div
 
 # Main Function Definition
-    def main():
-    # Initializing Variables
-        a = 10
-        b = 5
-    
-    # Performing Addition
-        print("{} + {} = {}".format(a, b, add(a, b)))
+def main():
+    # Defining Variables
+    a = 10
+    b = 5
 
-    # Performing Subtraction
-        print("{} - {} = {}".format(a, b, sub(a, b)))
+    # Performing Addition and Printing Result
+    result_add = add(a, b)
+    print(f"Result of {a} + {b} = {result_add}")
 
-    # Performing Multiplication
-        print("{} * {} = {}".format(a, b, mul(a, b)))
+    # Performing Subtraction and Printing Result
+    result_sub = sub(a, b)
+    print(f"Result of {a} - {b} = {result_sub}")
 
-    # Performing Division
-        print("{} / {} = {}".format(a, b, div(a, b)))
+    # Performing Multiplication and Printing Result
+    result_mul = mul(a, b)
+    print(f"Result of {a} * {b} = {result_mul}")
 
-# Calling the Main Function
+    # Performing Division and Printing Result
+    result_div = div(a, b)
+    print(f"Result of {a} / {b} = {result_div}")
+
+# Ensuring the Script is not Executed when Imported
+if __name__ == '__main__':
+    # Calling the Main Function
     main()
 
