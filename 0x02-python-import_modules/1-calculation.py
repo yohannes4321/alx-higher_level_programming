@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-
+# 1-calculation.pyI
 # Importing Specific Functions from calculator_1 Module
 from calculator_1 import add, sub, mul, div
 
-# Main Function Definition
 def main():
-    # Defining Variables
     a = 10
     b = 5
 
@@ -29,4 +27,3 @@ def main():
 if __name__ == '__main__':
     # Calling the Main Function
     main()
-
