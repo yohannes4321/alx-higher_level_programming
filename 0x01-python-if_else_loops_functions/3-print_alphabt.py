@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-for i in range(ord('a'), ord('z') + 1):
-    if i == ord('q') or i == ord('e'):
-        continue
-    else:
-        print("{:c}".format(i), end='')
+for i in range(ord("a"), ord("z")+1):
+    if i != ord("q") and i != ord("e"):
+        print(chr(i))
