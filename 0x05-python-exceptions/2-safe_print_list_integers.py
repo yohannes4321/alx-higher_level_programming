@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 
-
 def safe_print_list_integers(my_list=[], x=0):
-    """
-    prints a list of anything, but only prints the integers
-    Returns the amount of integers printed
-    """
-    i = 0
-    printed = 0
-    for i in range(0, x):
-        try:
-            print("{:d}".format(my_list[i]), end="")
-            printed += 1
-        except (ValueError, TypeError):
-            continue
+    num = 0
+    try:
+        for i in range(0, x):
+            # Check if the element is an integer before printing
+            
+            if type(my_list[i])==int:
+                print("{:d}".format(my_list[i]),end='')
+                num+=1
+    except(IndexError,ValueError,TypeError):
+        raise IndexError("list index out of range")
     print()
-    return printed
+    return num
