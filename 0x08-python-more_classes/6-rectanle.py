@@ -1,20 +1,21 @@
 #!/usr/bin/python3
-"""Module 4-rectangle
+"""Module 3-rectangle
 Defines a Rectangle class.
 """
-
+    
 
 class Rectangle:
+    
     """Rectangle class defined by width and height."""
-
+    number_of_instance=0
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle instance.
         Args:
             width: width of the rectangle
             height: height of the rectangle
         """
-        self.width = width
-        self.height = height
+        Rectangle.number_of_instance +=1
+        
 
     def __str__(self):
         """Returns an informal and nicely printable string representation
@@ -26,13 +27,7 @@ class Rectangle:
             for j in range(self.__width):
                 rec_str += '#'
             rec_str += '\n'
-        return rec_str[:-1]
-
-    def __repr__(self):
-        """Return a string representation of a Rectangle instance
-        that is able to recreate a new instance by using eval()
-        """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return rec_str[:]
 
     @property
     def width(self):
@@ -83,3 +78,42 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
+    
+    def __str__(self):
+        result=[]
+        if self.__width==0 or self.__height==0 :
+            return ("")
+        for i in range(0,self.__width):
+            for j in range(0,self.__height):
+                result.append('#')
+                if j == self.__height-1:
+                    result.append('\n')
+        return ("".join(result))
+            
+    def __repr__(self):
+        result="Rectangle (" + str(self.__width)
+        result += ", " + str(self.height) + ")"
+        return result
+    def __del__(self):
+        print("bye rectangle...")
+        Rectangle.number_of_instance -=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
