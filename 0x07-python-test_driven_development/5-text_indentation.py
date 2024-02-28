@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 """
-Function that prints a text with 2 new lines after each '.', '?', ':'
+A module that indents text
 """
 
 
 def text_indentation(text):
-    """nothing"""
+    """A function that indents text."""
+
     if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    beg = 0
-    for idx, val in enumerate(text):
-        if val in '?:.':
-            print(text[beg:idx + 1].strip() + '\n')
-            beg = idx + 1
-    if not beg:
-        print(text, end='')
-    elif beg is not len(text):
-        print(text[beg:idx + 1].strip(), end='')
+        raise TypeError('text must be a string')
+    for i in range(len(text)):
+        if text[i] == '.' or text[i] == '?' or text[i] == ':':
+            print(text[i])
+            print()
+        elif i != 0 and text[i] == ' ':
+            if text[i - 1] == '.' or text[i - 1] == '?' or text[i - 1] == ':':
+                continue
+            else:
+                print(text[i], end="")
+        else:
+            print(text[i], end="")
