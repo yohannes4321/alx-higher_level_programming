@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+
+""" crating shebang to run python """
+
+class MyList (list):
+
+
+""
