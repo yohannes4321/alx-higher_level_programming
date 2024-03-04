@@ -104,7 +104,7 @@ class Rectangle(Base):
         string += str(self.width) + "/" + str(self.height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """*accepting args only user wnat to give """
         if args:
             if len(args) >= 1:
@@ -117,3 +117,8 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+            """ if it is not contained in args we gona """
+            """solve using **kwargs"""
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
