@@ -105,6 +105,7 @@ class Rectangle(Base):
         return string
 
     def update(self, *args):
+        """*accepting args only user wnat to give """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
