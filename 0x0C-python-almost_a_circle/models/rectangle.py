@@ -88,7 +88,13 @@ class Rectangle(Base):
 
     def display(self):
         """display rectangle class"""
+        
         for i in range(self.height):
             for j in range(self.width):
                 print('#', end='')
             print()
+    def __str__(self):
+        string="[" + str(__class__.__name__) + "] " 
+        string +="("+str(self.id)+") " +str(self.x) + "/" + str(self.y) +" - "
+        string +=str(self.width) + "/" + str(self.height)
+        return string
