@@ -10,7 +10,9 @@ class Square(Rectangle):
         """super(). class must be replaced by size"""
         """self.size = size"""
         super().__init__(size, size, x, y, id)
+        """k"""
         self.size = size
-
+    """__str__"""
     def __str__(self):
+        """str"""
         return f"[Square] ({self.id}) {self.x} / {self.y} - {self.size}"
