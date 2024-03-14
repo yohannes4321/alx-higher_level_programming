@@ -1,2 +1,2 @@
---creating sql
-SELECT * FROM 0-list_databases
+--DATABASES in sql server
+SHOW DATABASES;
