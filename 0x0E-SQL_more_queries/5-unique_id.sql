@@ -1,5 +1,4 @@
--- Creates the table unique_id.
-CREATE TABLE IF NOT EXISTS `unique_id` (
-    `id`   INT          DEFAULT 1 UNIQUE,
-    `name` VARCHAR(256)
-);
+-- create uniq id 
+create table if not exists unique_id( id INT primary key default 1, 
+name VARCHAR (256));
+
