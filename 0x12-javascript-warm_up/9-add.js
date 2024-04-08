@@ -1,15 +1,8 @@
 #!/usr/bin/node
+// prints the addition of 2 integers
 
-const k = parseInt(process.argv[2]);
-const y = parseInt(process.argv[3]);
-
-if (!isNaN(k) && !isNaN(y)) {
-  function add(k, y) {
-    const result = k + y;
-    console.log(result);
-  }
-
-  add(k, y); // Call the add function with provided arguments
-} else {
-  console.log('NaN');
+function add (a, b) {
+  return parseInt(a) + parseInt(b);
 }
+
+console.log(add(process.argv[2], process.argv[3]));
