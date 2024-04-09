@@ -1,12 +1,8 @@
 #!/usr/bin/node
-
-if (process.argv.length <= 2) {
-  console.log(0);
-} else if (process.argv.length === 3) {
-  console.log(0);
+if (process.argv.length <= 3) {
+  console.log('0');
 } else {
-  let numbers = process.argv.slice(2).map(Number);
-  let max = Math.max.apply(null, numbers);
-  numbers = numbers.filter(num => num !== max);
-  console.log(Math.max.apply(null, numbers));
+  const arr = process.argv.slice(2).map(Number);
+  const second = arr.sort(function (a, b) { return b - a; })[1];
+  console.log(second);
 }
