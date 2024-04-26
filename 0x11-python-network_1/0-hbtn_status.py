@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""Fetch url usaing urllib"""
-from urllib import request
+# this is fitching from the website
+import urllib.request
 
-if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-    with request.urlopen(url) as response:
-        type = response.getheader("Content-Type")
-        content = response.read()
-        utf8 = content.decode("utf-8")
-        print("Body response:")
-        print("\t- type: {}".format(type))
-        print("\t- content: {}".format(content))
-        print("\t- utf content: {}".format(utf8))
 
+if __name__ == '__main__':
+    url = 'https://alx-intranet.hbtn.io/status'
+    with urllib.request.urlopen(url) as response:
+        valuef_from = response.read()
+        print('Body response:')
+        print('\t- type: {}'.format(type(valuef_from )))
+        print('\t- content: {}'.format(valuef_from ))
+        print('\t- utf8 content: {}'.format(valuef_from .decode('utf-8')))
