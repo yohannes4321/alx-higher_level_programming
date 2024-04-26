@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""This script takes in a letter and sends a POST request
-to http://0.0.0.0:5000/search_user with the letter as a
-parameter"""
+"""This   request
+to  """
 import requests
 import sys
 
@@ -10,9 +9,9 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
-    url = "http://0.0.0.0:5000/search_user"
+    urll= "http://0.0.0.0:5000/search_user"
     data = {'q': q}
-    response = requests.post(url, data)
+    response = requests.post(urll, data)
     try:
         json = response.json()
         if json:

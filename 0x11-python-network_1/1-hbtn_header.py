@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script displays the value of the X-Request-Id variable"""
+"""This script displays the   """
 import urllib.request
 import sys
 

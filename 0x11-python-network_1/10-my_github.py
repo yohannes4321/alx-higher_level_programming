@@ -9,10 +9,10 @@ from sys import argv
 
 if __name__ == "__main__":
     url = 'https://api.github.com/user'
-    username = argv[1]
-    password = argv[2]
-    response = requests.get(url, auth=(username, password))
+    usernameee = argv[1]
+    passworddd = argv[2]
+    responseee= requests.get(url, auth=(usernameee, passworddd))
     try:
-        print(response.json()['id'])
+        print(responseee.json()['id'])
     except KeyError:
         print("None")

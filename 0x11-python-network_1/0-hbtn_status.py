@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""This module fetches a URL"""
+"""url """
 import urllib.request
 
 
 if __name__ == '__main__':
-    url = 'https://alx-intranet.hbtn.io/status'
-    with urllib.request.urlopen(url) as response:
-        data = response.read()
+    url_data = 'https://alx-intranet.hbtn.io/status'
+    with urllib.request.urlopen(url_data) as response:
+        data_value = response.read()
         print('Body response:')
-        print('\t- type: {}'.format(type(data)))
-        print('\t- content: {}'.format(data))
-        print('\t- utf8 content: {}'.format(data.decode('utf-8')))
+        print('\t- type: {}'.format(type(data_value)))
+        print('\t- content: {}'.format(data_value))
+        print('\t- utf8 content: {}'.format(data_value.decode('utf-8')))
