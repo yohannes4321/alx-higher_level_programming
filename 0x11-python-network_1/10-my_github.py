@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-"""This script takes my github credentials(username and
-password) and uses the GitHub API to display my id.
-It uses Basic Authentication with personal access token
-as password. The first argument is my username and the second
-argument will be my personal access token as password"""
+"""request to http://0.0.0.0:5000/search_user with a given letter.""" 
+import sys
 import requests
-from sys import argv
+
 
 if __name__ == "__main__":
-    url = 'https://api.github.com/user'
-    usernameee = argv[1]
-    passworddd = argv[2]
-    responseee= requests.get(url, auth=(usernameee, passworddd))
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
+
+    read_va = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        print(responseee.json()['id'])
-    except KeyError:
-        print("None")
+        response = read_va.json()
+        if response == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
+        print("Not a valid JSON")
