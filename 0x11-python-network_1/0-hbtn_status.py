@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-# this is fitching from the website
+"""This module fetches a URL"""
 import urllib.request
 
 
 if __name__ == '__main__':
     url = 'https://alx-intranet.hbtn.io/status'
     with urllib.request.urlopen(url) as response:
-        valuef_from = response.read()
+        data = response.read()
         print('Body response:')
-        print('\t- type: {}'.format(type(valuef_from )))
-        print('\t- content: {}'.format(valuef_from ))
-        print('\t- utf8 content: {}'.format(valuef_from .decode('utf-8')))
+        print('\t- type: {}'.format(type(data)))
+        print('\t- content: {}'.format(data))
+        print('\t- utf8 content: {}'.format(data.decode('utf-8')))
