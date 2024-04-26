@@ -9,7 +9,7 @@ if __name__ == "__main__":
         content = response.read()
         utf8 = content.decode("utf-8")
         print("Body response:")
-        print("\t- type: " + type)
-        print("\t- content: " + content)
-        print("\t- utf content: " + utf8)
+        print("\t- type: {}".format(type))
+        print("\t- content: {}".format(content))
+        print("\t- utf content: {}".format(utf8))
 
