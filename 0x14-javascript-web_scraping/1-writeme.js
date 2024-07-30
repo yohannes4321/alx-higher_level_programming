@@ -1,17 +1,13 @@
 #!/usr/bin/node
-
-// Import the 'fs' module
+// This script accepts a file path and some string to write to
+// the file. It writes the  ontent of the string to the file
+// or the error object.
 const fs = require('fs');
-
-// Get the filename and content from the command-line arguments
-const filename = process.argv[2];
+const filePath = process.argv[2];
 const content = process.argv[3];
 
-// Write the content to the specified file
-fs.writeFile(filename, content, 'utf8', (err, data) => {
+fs.writeFile(filePath, content, 'utf8', (err) => {
   if (err) {
-    console.error('Error:', err);
-    process.exit(1);
+    console.log(err);
   }
-  console.log(data);
 });
